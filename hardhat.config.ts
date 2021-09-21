@@ -18,17 +18,12 @@ import {
     HOMESTEAD_MNEMONIC,
     HOMESTEAD_URL,
     KOVAN_MNEMONIC,
-    KOVAN_URL,
-    RINKEBY_MNEMONIC,
-    RINKEBY_URL,
-    ROOT_DIR,
+    KOVAN_URL, ROOT_DIR,
     ROPSTEN_MNEMONIC,
     ROPSTEN_URL,
     SOKOL_MNEMONIC,
     SOKOL_URL,
-    SRC_DIR,
-    XDAI_MNEMONIC,
-    XDAI_URL,
+    SRC_DIR
 } from "./constants"
 import { TASK_CHECK_CHAINLINK, TASK_MIGRATE, TASK_SIMULATE } from "./scripts/common"
 
@@ -101,10 +96,10 @@ const config: HardhatUserConfig = {
             },
         },
         rinkeby: {
-            url: RINKEBY_URL,
+            url: 'https://rinkeby.infura.io/v3/c95e6a6fcc2d4d11aba3f3a1d2e797d0',
             gasPrice: GAS_PRICE,
             accounts: {
-                mnemonic: RINKEBY_MNEMONIC,
+                mnemonic: 'nest bulb survey run have little exact battle enroll review inflict uncle',
             },
         },
         homestead: {
@@ -122,11 +117,10 @@ const config: HardhatUserConfig = {
             },
         },
         xdai: {
-            url: XDAI_URL,
-            gasPrice: GAS_PRICE,
-            accounts: {
-                mnemonic: XDAI_MNEMONIC,
-            },
+            url: "https://dai.poa.network/",
+            chainId: 100,
+            gasPrice: 1000000000,
+            accounts: ['c1fe229c9990ba2b2e555f2be759d5fc9ecd39bb9c04d1bc87d7d51225fd2cdd']
         },
     },
     solidity: {
